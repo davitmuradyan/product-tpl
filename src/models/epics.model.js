@@ -8,7 +8,8 @@ module.exports = function (app) {
   const epics = sequelizeClient.define('epics', { 
     epic_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     project_id: {
       type: DataTypes.INTEGER,

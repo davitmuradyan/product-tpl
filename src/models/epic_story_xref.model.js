@@ -24,7 +24,14 @@ module.exports = function (app) {
 
   // eslint-disable-next-line no-unused-vars
   epicStoryXref.associate = function (models) {
-
+    epicStoryXref.belongsTo(models.epics, {
+      foreignKey: 'epic_id',
+      targetKey: 'epic_id'
+    });
+    epicStoryXref.belongsTo(models.stories, {
+      foreignKey: 'story_id',
+      targetKey: 'story_id'
+    });
   };
 
   return epicStoryXref;

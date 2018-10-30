@@ -8,7 +8,8 @@ module.exports = function (app) {
   const stories = sequelizeClient.define('stories', {
     story_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     project_id: {
       type: DataTypes.INTEGER,
